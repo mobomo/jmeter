@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  jmeter:
+    build:
+      context: ./docker-src
+    image: mobomo/jmeter
+    container_name: jmeter-gui
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./tests:/mnt
+

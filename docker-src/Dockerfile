@@ -1,11 +1,11 @@
 FROM openjdk:8-jdk
 
 RUN apt-get update \
-	&& apt-get install sudo \
+	&& apt-get install sudo  -y\
 	&& apt-get install -y --no-install-recommends apt-utils \
-	&& apt-get install jq
+	&& apt-get install jq -y
 
-ARG jmeter_ver=3.1
+ARG jmeter_ver=4.0
 
 RUN wget http://www.us.apache.org/dist/jmeter/binaries/apache-jmeter-${jmeter_ver}.tgz \
 	&& echo Insalling JMeter version ${jmeter_ver} .. \

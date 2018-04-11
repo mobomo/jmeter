@@ -1,5 +1,14 @@
 # JMeter container
 
+## Instructions added by Mobomo
+must be on a linux system. Running the following command will launch the GUI in X11. Any tests you have should be put into the /tests folder. That is shared the the host
+
+```
+docker-compose up
+```
+
+Tada!
+
 #### Jenkins to run JMeter headless (k8s):
 
 > https://github.com/qazynx/jmeter/tree/master/yaml
